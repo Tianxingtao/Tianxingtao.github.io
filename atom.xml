@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tianxingtao.github.io/"/>
-  <updated>2020-07-22T16:02:52.187Z</updated>
+  <updated>2020-07-24T16:10:05.945Z</updated>
   <id>http://tianxingtao.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何卸载/退出亚信安全防毒墙网络版</title>
+    <link href="http://tianxingtao.github.io/2020/07/24/uninstall_asia/"/>
+    <id>http://tianxingtao.github.io/2020/07/24/uninstall_asia/</id>
+    <published>2020-07-24T14:17:56.000Z</published>
+    <updated>2020-07-24T16:10:05.945Z</updated>
+    
+    <content type="html"><![CDATA[<p>操作步骤简单：<br><img src= "/img/loading.gif" data-src="/images/uninstall_asia.png" alt="正确卸载亚信"><br>首先确认下系统是32位还是64位，因为在不同位数的系统上注册表路径存在差异，这点需要注意一下。</p><ol><li>电脑开机按F8（不同电脑的方式不同，需要去查一下），进入安全模式，一定是安全模式，不要选其他带网络安全模式之类的，必须是：安全模式； （小新 pro 13 进入安全模式的方法是按住 ctrl + c 输入 MSconfig，在引导下选中安全引导-最小，确认后重启即可）</li><li>进入安全模式后，如果你是为了卸载，那么修改注册表：<ul><li>32位系统： 将 HKEY_LOCAL_MACHINE/SOFTWARE/TrendMicro/pcCillinNTCorp/CurrentVersion/Misc中的 Allow Unistall 的键属值改为1即可，这样就可以重启电脑后进行卸载了。</li><li>64位系统：将 HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node/TrendMicro/PC-illinNTcorp/CurrentVersion/Misc/Allow Uninstall 的键属值改为1即可，这样就可以重启电脑后进行卸载了。</li></ul></li><li>如果你不是为了卸载，只是希望在使用过程中可以退出该软件，那么，修改注册表：<ul><li>32位系统：将 HKEY_LOCAL_MACHINE/SOFTWARE/TrendMicro/PC-cillinNTCorp/CurrentVersion/Misc/NoPwdProtect 键值由0 改为1即可，这样在正常使用过程中，就可以退出该软件，不需要输入密码。</li><li>64位系统：将 HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node/TrendMicro/PC-illinNTcorp/CurrentVersion/Misc/NoPwdProtect 键值由0 改为1即可，这样在正常使用过程中，就可以退出该软件，不需要输入密码。<br>上述修改之后，关闭注册表，重启电脑，进入正常模式，然后开始菜单找到亚信杀软项目进行卸载即可完成卸载。</li></ul></li></ol><p>转载自  <a href="https://blog.csdn.net/qq_36412526/article/details/106516811?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.edu_weight&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.edu_weight" target="_blank" rel="noopener">CSDN</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;操作步骤简单：&lt;br&gt;&lt;img src= &quot;/img/loading.gif&quot; data-src=&quot;/images/uninstall_asia.png&quot; alt=&quot;正确卸载亚信&quot;&gt;&lt;br&gt;首先确认下系统是32位还是64位，因为在不同位数的系统上注册表路径存在差异，这点需要
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
