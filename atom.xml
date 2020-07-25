@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tianxingtao.github.io/"/>
-  <updated>2020-07-24T16:24:49.532Z</updated>
+  <updated>2020-07-25T06:27:22.515Z</updated>
   <id>http://tianxingtao.github.io/</id>
   
   <author>
@@ -17,19 +17,72 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>如何卸载/退出亚信安全防毒墙网络版</title>
-    <link href="http://tianxingtao.github.io/2020/07/24/uninstall_asia/"/>
-    <id>http://tianxingtao.github.io/2020/07/24/uninstall_asia/</id>
-    <published>2020-07-24T14:17:56.000Z</published>
-    <updated>2020-07-24T16:24:49.532Z</updated>
+    <title>破解 Sublime</title>
+    <link href="http://tianxingtao.github.io/2020/07/25/crack-sublime/"/>
+    <id>http://tianxingtao.github.io/2020/07/25/crack-sublime/</id>
+    <published>2020-07-25T05:55:00.000Z</published>
+    <updated>2020-07-25T06:27:22.515Z</updated>
     
-    <content type="html"><![CDATA[<p>操作步骤简单：<br><img src= "/img/loading.gif" data-src="/images/uninstall_asia.png" alt="正确卸载亚信"><br>首先确认下系统是32位还是64位，因为在不同位数的系统上注册表路径存在差异，这点需要注意一下。</p><ol><li>电脑开机按F8（不同电脑的方式不同，需要去查一下），进入安全模式，一定是安全模式，不要选其他带网络安全模式之类的，必须是：安全模式； （小新 pro 13 进入安全模式的方法是按住 ctrl + c 输入 MSconfig，在引导下选中安全引导-最小，确认后重启即可）</li><li>进入安全模式后，如果你是为了卸载，那么修改注册表：<ul><li>32位系统： 将 HKEY_LOCAL_MACHINE/SOFTWARE/TrendMicro/pcCillinNTCorp/CurrentVersion/Misc中的 Allow Unistall 的键属值改为1即可，这样就可以重启电脑后进行卸载了。</li><li>64位系统：将 HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node/TrendMicro/PC-illinNTcorp/CurrentVersion/Misc/Allow Uninstall 的键属值改为1即可，这样就可以重启电脑后进行卸载了。</li></ul></li><li>如果你不是为了卸载，只是希望在使用过程中可以退出该软件，那么，修改注册表：<ul><li>32位系统：将 HKEY_LOCAL_MACHINE/SOFTWARE/TrendMicro/PC-cillinNTCorp/CurrentVersion/Misc/NoPwdProtect 键值由0 改为1即可，这样在正常使用过程中，就可以退出该软件，不需要输入密码。</li><li>64位系统：将 HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node/TrendMicro/PC-illinNTcorp/CurrentVersion/Misc/NoPwdProtect 键值由0 改为1即可，这样在正常使用过程中，就可以退出该软件，不需要输入密码。<br>上述修改之后，关闭注册表，重启电脑，进入正常模式，然后开始菜单找到亚信杀软项目进行卸载即可完成卸载。</li></ul></li></ol><p>转载自  <a href="https://blog.csdn.net/qq_36412526/article/details/106516811?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.edu_weight&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.edu_weight" target="_blank" rel="noopener">CSDN</a></p>]]></content>
+    <content type="html"><![CDATA[<ol><li><strong>安装</strong><br> 一路 NEXT 就好。(注意修改安装路径)。</li><li><strong>破解</strong><ul><li>利用 <a href="https://hexed.it/" target="_blank" rel="noopener">HexEditor</a> 打开软件安装目录下的sublime_text.exe</li><li>搜索 <u>97 94 0D 00</u> 改为 <u>00 00 00 00</u> 然后导出文件将原文件替换掉</li><li>修改 hosts 文件<blockquote><p>Windows hosts 文件在 <u>C:\windows\system32\drivers\etc</u> 下，copy 到桌面修改后再复制回去替换(权限获取复杂)<br>Linux 和 Mac 在Terminal 输入 <u>sudo nano /Private/etc/hosts</u> 和密码后输入下方数据</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 license.sublimehq.com</span><br><span class="line">127.0.0.1 www.sublimetext.com</span><br><span class="line">50.116.34.243 sublime.wbond.net</span><br><span class="line">50.116.34.243 packagecontrol.io</span><br></pre></td></tr></table></figure></li></ul></li><li><strong>激活</strong><br> 打开 <u>Sublime Text 3</u> 选择 Help -&gt; <u>Enter License</u> 输入下方信息后点击 <u>Use License</u> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">----- BEGIN LICENSE -----</span><br><span class="line">TwitterInc</span><br><span class="line">200 User License</span><br><span class="line">EA7E-890007</span><br><span class="line">1D77F72E 390CDD93 4DCBA022 FAF60790</span><br><span class="line">61AA12C0 A37081C5 D0316412 4584D136</span><br><span class="line">94D7F7D4 95BC8C1C 527DA828 560BB037</span><br><span class="line">D1EDDD8C AE7B379F 50C9D69D B35179EF</span><br><span class="line">2FE898C4 8E4277A8 555CE714 E1FB0E43</span><br><span class="line">D5D52613 C3D12E98 BC49967F 7652EED2</span><br><span class="line">9D2D2E61 67610860 6D338B72 5CF95C69</span><br><span class="line">E36B85CC 84991F19 7575D828 470A92AB</span><br><span class="line">------ END LICENSE ------</span><br></pre></td></tr></table></figure></li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;操作步骤简单：&lt;br&gt;&lt;img src= &quot;/img/loading.gif&quot; data-src=&quot;/images/uninstall_asia.png&quot; alt=&quot;正确卸载亚信&quot;&gt;&lt;br&gt;首先确认下系统是32位还是64位，因为在不同位数的系统上注册表路径存在差异，这点需要
+        &lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;安装&lt;/strong&gt;&lt;br&gt; 一路 NEXT 就好。(注意修改安装路径)。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;破解&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;利用 &lt;a href=&quot;https://hexed.it/&quot; target=&quot;_blank&quot; 
+      
+    
+    </summary>
+    
+    
+    
+      <category term="software" scheme="http://tianxingtao.github.io/tags/software/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows 软件清单</title>
+    <link href="http://tianxingtao.github.io/2020/07/25/software_list/"/>
+    <id>http://tianxingtao.github.io/2020/07/25/software_list/</id>
+    <published>2020-07-25T02:06:25.000Z</published>
+    <updated>2020-07-25T06:07:05.286Z</updated>
+    
+    <content type="html"><![CDATA[<p>给自己列的新机必装软件清单：</p><ol><li><strong>Bandzip</strong><br> 一个强大的解压缩文件管理工具，轻量小巧且解压速度极快，可自定义鼠标右键显示的选项以及解压缩方式等，默认亦可使用。在 <a href="https://www.bandizip.com/" target="_blank" rel="noopener">官网</a> 下载即可，免费版足够使用，专业版需要购买。</li><li><strong>Geek Uninstaller</strong><br> 专业卸载二十年，双击即卸，烦恼不见。在卸载的同时清除卸载后留下的冗余文件和注册表，右键该程序，可以查看每一项注册表，以及访问该程序的官方网站。在 <a href="https://geekuninstaller.com/download" target="_blank" rel="noopener">官网</a> 下载即可。</li><li><strong>SpaceSniffer</strong><br> 一款磁盘空间分析器。可在 <a href="https://www.fosshub.com/SpaceSniffer.html" target="_blank" rel="noopener">此处</a> 下载。<br> <img src= "/img/loading.gif" data-src="/images/software_list/SpaceSniffer.png" alt="SpaceSniffer"></li><li><strong>Dism++</strong><br> 一款 Windows 系统管理优化工具，包含自定义设置和优化，且轻巧、好使、透明、不流氓、不装可怜、不唠唠叨叨的实用工具。在 <a href="https://www.chuyu.me/zh-Hans/" target="_blank" rel="noopener">官网</a> 下载即可。</li><li><strong>Wox</strong><br> 快速启动工具(打开软件、链接、快速搜索等)，在安装了 Everything 之后可调用其快速搜索磁盘。在 <a href="http://www.wox.one/" target="_blank" rel="noopener">Wox 官网</a> 下载即可，搭配 <a href="https://www.voidtools.com/zh-cn/" target="_blank" rel="noopener">Everything</a> 食用更佳。输入 setting 进行设置。<br> <img src= "/img/loading.gif" data-src="/images/software_list/Wox.jpg" alt="Wox"></li><li><strong>Chrome</strong><br> 使用时间长了，习惯了而已。加个 VPN 体验还是不错的。在 <a href="https://www.google.cn/chrome/" target="_blank" rel="noopener">官网</a> 下载即可。</li><li><strong>xdown</strong><br> 专业的文件下载工具，多线程下载很好用,可替代 chrome 自带的下载工具(慢的一匹)，当然这需要下载插件才能替代。也可复制链接在 xdown 里下载。在 <a href="https://xdown.org/" target="_blank" rel="noopener">官网</a> 下载即可。</li><li><strong>HWINFO</strong><br> 主要可以显示出处理器、主板及芯片组、PCMCIA 接口、BIOS 版本、内存等信息，另外还提供了对处理器、内存、硬盘以及 CD-ROM 的性能测试功能。在 <a href="https://www.hwinfo.com/download/" target="_blank" rel="noopener">官网</a> 下载即可。<br> <img src= "/img/loading.gif" data-src="/images/software_list/HWINFO.png" alt="HWINFO"></li><li><strong>Sublime Text</strong><br> 一套跨平台的文本编辑器，基本上所有文件都能打开且不乱码，主要用来转格式，相当于专业版的记事本，还有其他强大的功能需要在 sublime 里面安装一些扩展包。在 <a href="https://www.sublimetextcn.com/3/" target="_blank" rel="noopener">官网</a> 下载即可。sublime 安装使用和破解方式请移驾查看 <a href="">Sublime</a> 破解和推荐扩展包。</li><li><strong>Git</strong><br>一个分布式版本控制软件，它比人的记忆可靠。在 <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">官网</a> 选择适合的版本下载即可。安装详情请移驾查看 <a href="">Git</a> 安装。</li><li><strong>Navicat</strong><br>支持多重连线的数据库管理工具。在 <a href="https://www.navicat.com.cn/download/navicat-premium" target="_blank" rel="noopener">官网</a> 下载即可。安装详情以及破解请移驾查看 <a href="">Navicat</a> 安装和破解。</li><li><strong>IDEA</strong><br>IntelliJ IDEA 是一种Java集成开发环境工具软件。在 <a href="https://www.jetbrains.com/idea/download/#section=windows" target="_blank" rel="noopener">官网</a> 下载即可。安装详情和破解方式请移驾查看 <a href="">IDEA</a> 安装和破解。</li><li><strong>Charles-proxy</strong><br>Charles 是 Web 端跨平台 HTTP 调试代理服务器的应用程序。在 <a href="https://www.charlesproxy.com/download/" target="_blank" rel="noopener">官网</a> 选择版本点击下载即可，破解方式请移驾查看 <a href="">Charles</a> 安装和破解。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;给自己列的新机必装软件清单：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Bandzip&lt;/strong&gt;&lt;br&gt; 一个强大的解压缩文件管理工具，轻量小巧且解压速度极快，可自定义鼠标右键显示的选项以及解压缩方式等，默认亦可使用。在 &lt;a href=&quot;https://www.b
+      
+    
+    </summary>
+    
+    
+    
+      <category term="software" scheme="http://tianxingtao.github.io/tags/software/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何卸载/退出亚信安全防毒墙网络版</title>
+    <link href="http://tianxingtao.github.io/2020/07/24/uninstall_asia/"/>
+    <id>http://tianxingtao.github.io/2020/07/24/uninstall_asia/</id>
+    <published>2020-07-24T14:17:56.000Z</published>
+    <updated>2020-07-25T05:56:32.429Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src= "/img/loading.gif" data-src="/images/uninstall_asia/uninstall_asia.png" alt="正确卸载亚信"><br>操作步骤简单：<br>首先确认下系统是32位还是64位，因为在不同位数的系统上注册表路径存在差异，这点需要注意一下。</p><ol><li>电脑开机按F8（不同电脑的方式不同，需要去查一下），进入安全模式，一定是安全模式，不要选其他带网络安全模式之类的，必须是：安全模式； （小新 pro 13 进入安全模式的方法是按住 ctrl + c 输入 MSconfig，在引导下选中安全引导-最小，确认后重启即可）</li><li>进入安全模式后，如果你是为了卸载，那么修改注册表：<ul><li>32位系统： 将 HKEY_LOCAL_MACHINE/SOFTWARE/TrendMicro/pcCillinNTCorp/CurrentVersion/Misc中的 Allow Unistall 的键属值改为1即可，这样就可以重启电脑后进行卸载了。</li><li>64位系统：将 HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node/TrendMicro/PC-illinNTcorp/CurrentVersion/Misc/Allow Uninstall 的键属值改为1即可，这样就可以重启电脑后进行卸载了。</li></ul></li><li>如果你不是为了卸载，只是希望在使用过程中可以退出该软件，那么，修改注册表：<ul><li>32位系统：将 HKEY_LOCAL_MACHINE/SOFTWARE/TrendMicro/PC-cillinNTCorp/CurrentVersion/Misc/NoPwdProtect 键值由0 改为1即可，这样在正常使用过程中，就可以退出该软件，不需要输入密码。</li><li>64位系统：将 HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node/TrendMicro/PC-illinNTcorp/CurrentVersion/Misc/NoPwdProtect 键值由0 改为1即可，这样在正常使用过程中，就可以退出该软件，不需要输入密码。<br>上述修改之后，关闭注册表，重启电脑，进入正常模式，然后开始菜单找到亚信杀软项目进行卸载即可完成卸载。</li></ul></li></ol><p>转载自  <a href="https://blog.csdn.net/qq_36412526/article/details/106516811?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.edu_weight&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.edu_weight" target="_blank" rel="noopener">CSDN</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src= &quot;/img/loading.gif&quot; data-src=&quot;/images/uninstall_asia/uninstall_asia.png&quot; alt=&quot;正确卸载亚信&quot;&gt;&lt;br&gt;操作步骤简单：&lt;br&gt;首先确认下系统是32位还是64位，因为在不同位数的系统
       
     
     </summary>
