@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://tianxingtao.github.io/"/>
-  <updated>2020-07-26T04:41:30.515Z</updated>
+  <updated>2020-07-28T15:14:31.358Z</updated>
   <id>http://tianxingtao.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Unknown column &#39;xxx&#39; in &#39;field list&#39; sql</title>
+    <link href="http://tianxingtao.github.io/2020/07/28/unknown_column_in_sql/"/>
+    <id>http://tianxingtao.github.io/2020/07/28/unknown_column_in_sql/</id>
+    <published>2020-07-28T15:08:04.000Z</published>
+    <updated>2020-07-28T15:14:31.358Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>情况一</strong><br>    数据库中和实体类中都包含该字段 -&gt; 仔细检查字段是否拼写错误。<br><strong>情况二</strong><br>    数据库中没有该字段，实体类中有该字段 -&gt; 在实体类中该属性上加上 @Transient 注解，表示该属性不是表中的列。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;情况一&lt;/strong&gt;&lt;br&gt;    数据库中和实体类中都包含该字段 -&amp;gt; 仔细检查字段是否拼写错误。&lt;br&gt;&lt;strong&gt;情况二&lt;/strong&gt;&lt;br&gt;    数据库中没有该字段，实体类中有该字段 -&amp;gt; 在实体类中该属性上加上 @Tran
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Java Web" scheme="http://tianxingtao.github.io/tags/Java-Web/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>navicat 远程连接查询速度慢</title>
+    <link href="http://tianxingtao.github.io/2020/07/28/navicat_slow/"/>
+    <id>http://tianxingtao.github.io/2020/07/28/navicat_slow/</id>
+    <published>2020-07-28T14:54:21.000Z</published>
+    <updated>2020-07-28T15:03:37.928Z</updated>
+    
+    <content type="html"><![CDATA[<p>Navicat 远程连接 Mysql 执行普通 sql 语句速度慢问题：<br><strong>原因</strong><br>    1. Mysql 服务器端会定时清理长时间不活跃空闲的数据库连接，以此优化数据库的性能。<br>    2. Navicat 客户端有一个设置：保持连接间隔，默认是 240 秒！意思是，客户端在用户无任何交互性操作时，会每隔240秒给Mysql服务端发送一次数据请求。以此来保持数据库连接活跃！然而Navicat设置的心跳包间隔太长了，Mysql 服务端直接将连接清理掉了。当我们打开一张表的时候，Navicat还是使用旧的连接去请求数据，发现旧的连接超时不能用了，最后又申请了一个新的连接，再去请求数据！<br><strong>解决</strong><br>    选中数据库 -&gt; 右键点击连接 -&gt; 选择高级 -&gt; 勾选保持连接间隔 -&gt; 默认是 240，可以将时间修改为例如 10 -&gt; 最后保存即可<br>    <img src= "/img/loading.gif" data-src="/images/navicat_slow/navicat_slow.png" alt="navicat_slow"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Navicat 远程连接 Mysql 执行普通 sql 语句速度慢问题：&lt;br&gt;&lt;strong&gt;原因&lt;/strong&gt;&lt;br&gt;    1. Mysql 服务器端会定时清理长时间不活跃空闲的数据库连接，以此优化数据库的性能。&lt;br&gt;    2. Navicat 客户端有一个设
+      
+    
+    </summary>
+    
+    
+    
+      <category term="software" scheme="http://tianxingtao.github.io/tags/software/"/>
+    
+  </entry>
   
   <entry>
     <title>charles-proxy 破解</title>
